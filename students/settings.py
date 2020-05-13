@@ -133,7 +133,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_ROOT = 'static'
+#STATIC_ROOT = 'static'
 #SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Static files (CSS, JavaScript, Images)
@@ -141,5 +141,5 @@ STATIC_ROOT = 'static'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [  #加入 static 路徑
-	os.path.join(BASE_DIR, 'staticfiles'),
+	os.path.join(BASE_DIR, 'static'),
 ]
