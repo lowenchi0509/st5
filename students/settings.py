@@ -103,7 +103,7 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'studentsapp',
+        'NAME': 'ddseusqos2uvf0',
         'USER': 'pfrniyxfjkyntv',
         'PASSWORD': '3309da5d521dbe7f9cc96410a6b4c7049e5064669242fd4881eda8cd2758323e',
         'HOST': 'ec2-34-234-228-127.compute-1.amazonaws.com',
