@@ -8,8 +8,8 @@ from linebot.models import TextSendMessage, AudioSendMessage, VideoSendMessage
 from linebot.models import BubbleContainer, ImageComponent, BoxComponent, TextComponent, IconComponent, ButtonComponent, SeparatorComponent, FlexSendMessage, URIAction
 from linebot.models import TextSendMessage, ImageSendMessage, LocationSendMessage, TemplateSendMessage,ButtonsTemplate, URITemplateAction, ConfirmTemplate, PostbackTemplateAction
 
-from hotelapi.models import booking, users
-
+from hotelapi.models import booking
+from hotelapi.models import users
 
 import datetime
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
@@ -498,7 +498,7 @@ def sendBooking(event, user_id):  #房間預約
                     title='房間預約',
                     text='您目前沒有訂房記錄，可以開始預訂房間。',
                     actions=[
-                        URITemplateAction(label='房間預約', uri='line://app/1580167687-86z4YMdx')  #開啟LIFF讓使用者輸入訂房資料
+                        URITemplateAction(label='房間預約', uri='https://liff.lineme/.1654180187-Y6trO6gmz')  #開啟LIFF讓使用者輸入訂房資料
                     ]
                 )
             )
@@ -610,8 +610,10 @@ def manageForm(event, mtext, user_id):  #處理LIFF傳回的FORM資料
         amount = flist[1]
         in_date = flist[2]
         out_date = flist[3]
+        
         unit = booking.objects.create(bid=user_id, roomtype=roomtype, roomamount=amount, datein=in_date, dateout=out_date)  #寫入資料庫
         unit.save()
+        
         text1 = "您的房間已預訂成功，資料如下："
         text1 += "\n房間型式：" + roomtype
         text1 += "\n房間數量：" + amount
