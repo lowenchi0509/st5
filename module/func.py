@@ -9,7 +9,7 @@ from linebot.models import BubbleContainer, ImageComponent, BoxComponent, TextCo
 from linebot.models import TextSendMessage, ImageSendMessage, LocationSendMessage, TemplateSendMessage,ButtonsTemplate, URITemplateAction, ConfirmTemplate, PostbackTemplateAction
 
 from hotelapi.models import booking, users
-from formapi.models import  users
+
 
 import datetime
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
