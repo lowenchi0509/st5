@@ -141,5 +141,5 @@ STATIC_ROOT = 'static'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [  #加入 static 路徑
-	os.path.join(BASE_DIR, 'static'),
+	os.path.join(BASE_DIR, 'staticfiles'),
 ]
